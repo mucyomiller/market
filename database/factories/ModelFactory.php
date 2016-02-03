@@ -58,3 +58,10 @@ $factory->define(App\Point::class, function (Faker\Generator $faker) {
         'points'=>$faker->numberBetween(10, 100000),
     ];
 });
+$factory->define(App\Message::class, function (Faker\Generator $faker) {
+    return [
+        'user_id' => $faker->unique()->numberBetween(1, 10),
+        'subject'=>$faker->sentence,
+        'message'=>$faker->paragraph(5),
+    ];
+});

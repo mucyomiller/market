@@ -7,6 +7,7 @@ use App\User;
 use App\Category;
 use App\Product;
 use App\Price;
+use App\Message;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -25,6 +26,11 @@ class AdminController extends Controller
         $users = User::all();
         return view('admin.admin')->with(['users'=>$users, 'products'=>$products]);
          //return view('admin.test');
+    }
+    public function getMessage()
+    {
+        $message =Message::all();
+        return view('admin.message')->with('messages', $message);
     }
     public function listuser()
     {
