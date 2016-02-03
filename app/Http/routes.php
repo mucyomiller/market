@@ -107,6 +107,7 @@ Route::group(['prefix'=>'admin','as' => 'admin.'], function () {
     Route::get('listuser', ['uses'=>'AdminController@listuser', 'as'=>'listuser']);
     Route::get('listcategory', ['uses'=>'AdminController@listcategory', 'as'=>'listcategory']);
     Route::get('message', ['uses'=>'AdminController@getMessage', 'as'=>'message']);
+    Route::get('readmessage', ['uses'=>'AdminController@readMessage', 'as'=>'readmessage']);
     Route::get('approve', ['uses'=>'AdminController@approveuser', 'as'=>'approveuser']);
     Route::get('delete', ['uses'=>'AdminController@delete', 'as'=>'delete']);
     Route::get('prices', ['uses'=>'AdminController@getprices', 'as'=>'prices']);

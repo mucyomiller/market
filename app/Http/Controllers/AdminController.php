@@ -32,6 +32,14 @@ class AdminController extends Controller
         $message =Message::all();
         return view('admin.message')->with('messages', $message);
     }
+    public function readMessage(Request $request)
+    {
+        $id =$request->input('id');
+        //dd($id);
+        $message = Message::findOrFail($id);
+        //dd($messages);
+        return view('admin.readmessage')->with('message',$message);
+    }
     public function listuser()
     {
         $users = User::paginate(15);
