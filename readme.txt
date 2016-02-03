@@ -1,5 +1,5 @@
 ## 
-Author : mucyomiller and sam
+Author : mucyomiller:mucyomiller@gmail.com and Samuel Niyitanga Nikobahoze
 
 
-this project is seriously for fun do not use it at production level because source code are not optimized to be used in production mode take it seriously and have fun
+This project is is still in development ......
