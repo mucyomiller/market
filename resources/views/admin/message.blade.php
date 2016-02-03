@@ -72,7 +72,7 @@
         <tr>
           <td><input type="checkbox"></td>
           <td class="mailbox-star"><a href="#"><i class="fa fa-star text-aqua"></i></a></td>
-          <td class="mailbox-name"><a href="read-mail.html">{{ $message->user->id }}</a></td>
+          <td class="mailbox-name"><a href="read-mail.html">{{ $message->user->persoinfo->firstname}}</a></td>
           <td class="mailbox-subject"><b>{{ $message->subject}}</b>..</td>
           <td class="mailbox-attachment"></td>
           <td class="mailbox-date">{{ $message->created_at->diffForHumans() }}</td>

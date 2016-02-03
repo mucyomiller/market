@@ -65,6 +65,6 @@ class User extends Model implements AuthenticatableContract,
     }
     public function Messages()
     {
-        return $this->belongsTo('App\Message', 'user_id', 'id');
+        return $this->hasMany('App\Message');
     }
 }
