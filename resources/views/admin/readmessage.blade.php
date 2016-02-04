@@ -14,7 +14,7 @@
                 </div>
                 <div class="box-body no-padding">
                   <ul class="nav nav-pills nav-stacked">
-                    <li><a href="mailbox.html"><i class="fa fa-inbox"></i> Inbox <span class="label label-primary pull-right">{{ $message->count() }}</span></a></li>
+                    <li><a href="{{route('admin.message')}}"><i class="fa fa-inbox"></i> Inbox <span class="label label-primary pull-right">{{ $message->count() }}</span></a></li>
                     <li><a href="#"><i class="fa fa-envelope-o"></i> Sent</a></li>
                     <li><a href="#"><i class="fa fa-file-text-o"></i> Drafts</a></li>
                   </ul>

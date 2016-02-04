@@ -14,11 +14,11 @@ class CreatePricesTable extends Migration
     {
         Schema::create('prices', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('market_id');
-            $table->integer('product_id');
+            $table->integer('market_id')->unsigned();
+            $table->integer('product_id')->unsigned();
             $table->string('current');
             $table->integer('price');
-            $table->integer('user_id');
+            $table->integer('user_id')->unsigned();
             $table->timestamps();
         });
     }

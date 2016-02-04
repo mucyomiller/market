@@ -15,7 +15,7 @@ class CreateMarketsTable extends Migration
         Schema::create('markets', function (Blueprint $table) {
             $table->increments('id');
             $table->string('market_name');
-            $table->integer('cell_id');
+            $table->integer('cell_id')->unsigned();
         });
     }
 
