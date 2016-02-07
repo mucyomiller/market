@@ -45,7 +45,7 @@
                 <div class="box-body no-padding">
                   <div class="mailbox-read-info">
                     <h3>Subject : {{$message->subject }}</h3>
-                    <h5>From: {{ $message->user->persoinfo->firstname}} {{ $message->user->persoinfo->lastname}} <span class="mailbox-read-time pull-right">{{ $message->created_at}}</span></h5>
+                    <h5>From: {{ $message->user->persoinfo->firstname}} {{ $message->user->persoinfo->lastname}} <span class="mailbox-read-time pull-right">{{ $message->created_at->diffForHumans() }}</span></h5>
                   </div><!-- /.mailbox-read-info -->
                   <div class="mailbox-controls with-border text-center">
                     <div class="btn-group">
