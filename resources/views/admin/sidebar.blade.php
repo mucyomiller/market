@@ -35,7 +35,9 @@
               </ul>
             </li>
             <li class="header">ACTIONS</li>
-          <li><a href="{{ route('admin.message')}}"><i class="fa fa-circle-o text-green"></i> inbox</a></li>
+          <li>
+          <a href="{{ route('admin.message')}}"><i class="fa fa-circle-o text-green"></i><span>inbox</span></a>
+          </li>
             <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
             <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
           </ul>
