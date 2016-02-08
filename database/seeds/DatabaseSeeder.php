@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
         Model::unguard();
             DB::table('personinfos')->truncate();
             DB::table('cells')->truncate();
+            DB::table('prices')->truncate();
 
         $this->call(UsersTableSeeder::class);
         $this->call(ProvincesTableSeeder::class);
@@ -29,6 +30,7 @@ class DatabaseSeeder extends Seeder
         $this->call(PersoninfoTableSeeder::class);
         $this->call(PointsTableSeeder::class);
         $this->call(MessageTableSeeder::class);
+        $this->call(PricesTableSeeder::class);
         Model::reguard();
     }
 }

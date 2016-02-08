@@ -27,7 +27,7 @@
                     <img src="dist/img/fred.jpg" class="img-circle" alt="User Image">
                     <p>
                       {{ Auth::admin()->get()->firstname}} {{Auth::admin()->get()->lastname}} - admin
-                      <small>From {{ Auth::admin()->get()->created_at }}</small>
+                      <small>From {{ Auth::admin()->get()->created_at->diffForHumans() }}</small>
                     </p>
                   </li>
                   <!-- Menu Body -->

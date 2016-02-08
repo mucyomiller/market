@@ -65,3 +65,12 @@ $factory->define(App\Message::class, function (Faker\Generator $faker) {
         'message'=>$faker->paragraph(5),
     ];
 });
+$factory->define(App\Price::class, function (Faker\Generator $faker) {
+    return [
+        'market_id' => $faker->numberBetween(1, 1000),
+        'product_id'=> $faker->numberBetween(1, 1000),
+        'current'=>$faker->dateTime(),
+        'price'=>$faker->randomNumber(3),
+        'user_id'=>$faker->numberBetween(1,50),
+    ];
+});
