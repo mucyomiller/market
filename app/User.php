@@ -47,7 +47,7 @@ class User extends Model implements AuthenticatableContract,
     {
         return $this->belongsTo('App\Market', 'market_id', 'id');
     }
-    public function persoinfo()
+    public function personInfo()
     {
         return $this->hasOne('App\PersonInfo', 'id', 'personinfo_id');
     }

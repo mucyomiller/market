@@ -1,7 +1,10 @@
 <?php
 use Illuminate\Http\Request;
 use App\District;
-
+use App\Sector;
+use App\Cell;
+use App\Category;
+use App\Market;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -72,7 +75,7 @@ Route::get('signout',
 
   ]);
 
-Route::get('/save',
+Route::post('save',
   ['uses'=>'UserController@savePrice',
   'as'=>'save',
   ]);
@@ -90,6 +93,30 @@ Route::get('profile',
   ['uses'=>'UserController@profile',
   'as'=>'profile',
   ]);
+Route::get('contact',
+  ['uses'=>'UserController@contact',
+  'as'=>'contact',
+  ]);
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Reports Routes
+|--------------------------------------------------------------------------
+|         here is where all Reports route located 
+|
+*/
+
+
+Route::get('reports', ['uses'=>'ReportController@search', 'as'=>'reports']);
+Route::post('sector', ['uses'=>'ReportController@look', 'as'=>'sector']);
+Route::post('district', ['uses'=>'ReportController@district', 'as'=>'district']);
+Route::get('/', ['uses'=>'ReportController@searchProduct', 'as'=>'search']);
+Route::post('product', ['uses'=>'ReportController@results', 'as'=>'product']);
+Route::post('send',
+  ['uses'=>'UserController@sendMessage','as'=>'send']);
+
 
 
 /*

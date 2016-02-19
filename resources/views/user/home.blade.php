@@ -4,17 +4,16 @@
 	<div class="col-lg-4"></div>
 <div class="col-lg-3">
 	<h3>Register the price:</h3>
-     <form method="GET" action="{{route('save')}}">
+     <form method="POST" action="{{route('save')}}">
          {!! csrf_field() !!}
 	<div class="form-group{{$errors->has('product')?' has-error':'' }}">
 	    <label class="control-label" for="form-product">Product:</label>
 	    <select name="product" class="form-control" id="product"  value={{Request::old('product')?:'' }} required="required">
 	    <option selected="selected" disabled></option>
 	     @foreach($products as $product)
-		<option value="{{$product->id}}">{{$product->product_name}}/{{$product->quantity_unit}}</option>
+		<option value="{{$product->id}}">{{$product->product_name}}...{{$product->quantity_unit}}</option>
         @endforeach
-  
-	</select>
+  </select>
 	   @if($errors->has('sign-in-phone'))
               <span class="help-block">{{$errors->first('sign-in-phone')}}</span>
 	   @endif

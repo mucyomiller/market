@@ -27,7 +27,7 @@
   <body class="hold-transition login-page">
     <div class="login-box">
       <div class="login-logo">
-        <a href="../../index2.html"><b>Admin</b>Dashboard</a>
+        <a href="{{ route('index')}}"><b>Admin</b>Dashboard</a>
       </div><!-- /.login-logo -->
       <div class="login-box-body">
         <p class="login-box-msg"><i class='fa fa-lock pull-left  fa-2x'></i>Sign in to start your session</p>

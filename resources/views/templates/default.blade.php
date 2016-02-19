@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Market</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="{{ asset('js/jQuery-2.1.4.min.js')}}"></script>
 	<link rel="stylesheet" href="{{ asset('css/bootstrap-theme.min.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/ripples.min.css') }}">
