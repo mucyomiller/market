@@ -33,9 +33,9 @@
                     <tr>
                       <td>{{ $user->id }}</td>
                       <td>{{ $user->phone }}</td>
-                      <td>{{ $user->persoinfo->firstname }}</td>
-                      <td>{{ $user->persoinfo->lastname }}</td>
-                      <td>{{ $user->persoinfo->idnumber }}</td>
+                      <td>{{ $user->personinfo->firstname }}</td>
+                      <td>{{ $user->personinfo->lastname }}</td>
+                      <td>{{ $user->personinfo->idnumber }}</td>
                       <td>{{ $user->market->market_name }}</td>
                       <td>{{ $user->category->category_name }}</td>
                       <td><span class="label {{ $user->status =='1' ? ' label-success':'label-danger'}} ">{{ $user->status == '1' ? ' approved':'pending'}}</span></td>

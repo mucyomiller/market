@@ -72,7 +72,7 @@
         <tr>
           <td><input type="checkbox"></td>
           <td class="mailbox-star"><a href="#"><i class="fa fa-star text-aqua"></i></a></td>
-          <td class="mailbox-name"><a href="{{ route('admin.readmessage',['id'=>$message->id]) }}">{{ $message->user->persoinfo->firstname}} {{ $message->user->persoinfo->lastname}}</a></td>
+          <td class="mailbox-name"><a href="{{ route('admin.readmessage',['id'=>$message->id]) }}">{{ $message->user->personinfo->firstname}} {{ $message->user->personinfo->lastname}}</a></td>
           <td class="mailbox-subject"><a href="{{ route('admin.readmessage',['id'=>$message->id]) }}"><b>{{ $message->subject}}</b>..</a></td>
           <td class="mailbox-attachment"></td>
           <td class="mailbox-date">{{ $message->created_at->diffForHumans() }}</td>
