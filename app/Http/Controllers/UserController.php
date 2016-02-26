@@ -53,7 +53,7 @@ class UserController extends Controller
               'market'=>'required',
               'category'=>'required',
               'pin'=>'required|numeric|digits:4',
-              'pin-validation'=>'required|numeric|digits:5|same:pin',
+              'pin-validation'=>'required|numeric|digits:4|same:pin',
 
         ]);
   
