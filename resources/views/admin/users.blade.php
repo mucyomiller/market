@@ -33,13 +33,13 @@
                     <tr>
                       <td>{{ $user->id }}</td>
                       <td>{{ $user->phone }}</td>
-                      <td>{{ $user->personinfo->firstname }}</td>
-                      <td>{{ $user->personinfo->lastname }}</td>
-                      <td>{{ $user->personinfo->idnumber }}</td>
-                      <td>{{ $user->market->market_name }}</td>
-                      <td>{{ $user->category->category_name }}</td>
+                      <td>{{ $user->personinfo ? $user->personinfo->firstname : " " }}</td>
+                      <td>{{ $user->personinfo ? $user->personinfo->lastname : " "}}</td>
+                      <td>{{ $user->personinfo ? $user->personinfo->idnumber : " " }}</td>
+                      <td>{{ $user->market ? $user->market->market_name : " " }}</td>
+                      <td>{{ $user->category ? $user->category->category_name : " "}}</td>
                       <td><span class="label {{ $user->status =='1' ? ' label-success':'label-danger'}} ">{{ $user->status == '1' ? ' approved':'pending'}}</span></td>
-                      <td>{{ $user->point->points }}</td>
+                      <td>{{ $user->point ? $user->point->points : " " }}</td>
                       <td><a href="approve?id={{$user->id}}" class="btn btn-xs btn-block {{ $user->status =='1' ? ' btn-danger':'btn-success'}}">{{$user->status == '1' ? 'disable':'Approve'}}</a></td>
                       <td><a href="delete?scope=user&id={{$user->id}}" class="btn btn-xs btn-block {{'btn-primary'}}">delete</a></td>
                     </tr>
