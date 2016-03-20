@@ -19,6 +19,7 @@ class AdminsTableSeeder extends Seeder
           'password'=> Hash::make('1234'),
           'firstname'=>'mucyo',
           'lastname'=>'fred',
+          'job_title'=>'Full stack developer',
           'email'=>'mucyomiller@gmail.com'
           ]);
     }
