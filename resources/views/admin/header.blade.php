@@ -1,4 +1,4 @@
-<header class="main-header">
+        <header class="main-header">
         <!-- Logo -->
         <a href="{{ route('admin.index') }}" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
@@ -45,7 +45,7 @@
                   <!-- Menu Footer-->
                   <li class="user-footer">
                     <div class="pull-left">
-                      <a href="#" class="btn btn-default btn-flat">Profile</a>
+                      <a href="{{ route('admin.profile',Auth::admin()->get()->id) }}" class="btn btn-default btn-flat">Profile</a>
                     </div>
                     <div class="pull-right">
                       <a href="{{ route('admin.logout')}}" class="btn btn-default btn-flat">Sign out</a>
