@@ -1,4 +1,17 @@
 @extends('admin.admin_template')
+@push('page_header')
+<section class="content-header">
+    <h1>
+    Dashboard
+    <small>Control panel</small>
+    </h1>
+    <ol class="breadcrumb">
+    <li><a href="#"><i class="fa fa-dashboard"></i> inbox</a></li>
+    <li class="active">Dashboard</li>
+    </ol>
+    </section>
+@endpush
+
 @section('content')
        <!-- Main content -->
         <section class="content">
@@ -45,7 +58,7 @@
                 <div class="box-body no-padding">
                   <div class="mailbox-read-info">
                     <h3>Subject : {{$message->subject }}</h3>
-                    <h5>From: {{ $message->user->personinfo->firstname}} {{ $message->user->personinfo->lastname}} <span class="mailbox-read-time pull-right">{{ $message->created_at->diffForHumans() }}</span></h5>
+                    <h5>From: {{ $message->user->personinfo ? $message->user->personinfo->firstname : ''}} {{ $message->user->personinfo ? $message->user->personinfo->lastname : ''}} <span class="mailbox-read-time pull-right">{{ $message->created_at->diffForHumans() }}</span></h5>
                   </div><!-- /.mailbox-read-info -->
                   <div class="mailbox-controls with-border text-center">
                     <div class="btn-group">
