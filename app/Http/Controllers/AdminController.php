@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 
 use Auth;
 use Redirect;
+use App\Admin;
 use App\User;
 use App\Category;
 use App\Product;
@@ -26,6 +27,11 @@ class AdminController extends Controller
         $users = User::all();
         return view('admin.admin')->with(['users'=>$users, 'products'=>$products]);
          //return view('admin.test');
+    }
+    public function profile($id){
+        
+        $admin =Admin::findOrFail($id);
+        return view('admin.profile',compact('admin',$admin));
     }
     public function getMessage()
     {

@@ -129,6 +129,7 @@ Route::post('send',
 Route::group(['prefix'=>'admin','as' => 'admin.'], function () {
 
     Route::get('index', ['uses'=>'AdminController@index', 'as'=>'index']);
+    Route::get('profile/{id}', ['uses'=>'AdminController@profile', 'as'=>'profile']);    
     Route::get('login', ['uses'=>'AdminController@getSignin', 'as'=>'login']);
     Route::get('logout', ['uses'=>'AdminController@logout', 'as'=>'logout']);
     Route::get('listuser', ['uses'=>'AdminController@listuser', 'as'=>'listuser']);
