@@ -1,7 +1,7 @@
 <nav class="navbar navbar-default" role="navigation">
 	<div class="container">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="#">Market</a>
+			<a class="navbar-brand topnav" href="{{ route('index') }}">E-Pricing System</a>
 		</div>
 		<div class="collapse navbar-collapse">
 @if(Auth::user()->check()) 

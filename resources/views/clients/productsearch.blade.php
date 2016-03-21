@@ -1,5 +1,5 @@
 @extends('clients.clients_templates')
- @section('content')
+@section('content')
 <div class="col-md-4"></div>
          <div class="col-md-4">
              {!! Form::open(array('url' =>'product'))!!}
