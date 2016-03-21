@@ -71,7 +71,7 @@
         </div><!-- /.social-auth-links -->
 
         <a href="#">I forgot my password</a><br>
-        <a href="register.html" class="text-center">Register a new membership</a>
+        <a href="{{ route('search') }}" class="text-center">return back to home</a>
 
       </div><!-- /.login-box-body -->
     </div><!-- /.login-box -->
