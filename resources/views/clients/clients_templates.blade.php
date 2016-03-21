@@ -43,7 +43,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand topnav" href="#">E-Pricing System</a>
+                <a class="navbar-brand topnav" href="{{ route('search') }}">E-Pricing System</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -55,7 +55,7 @@
                         <a href="#services">Search Product</a>
                     </li>
                     <li>
-                        <a href="#contact">Contact</a>
+                        <a href="{{ route('index') }}">Sign up</a>
                     </li>
                 </ul>
             </div>

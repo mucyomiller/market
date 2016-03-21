@@ -11,7 +11,7 @@
               <h3><i class="fa fa-warning text-red"></i> Oops! Page Not Found.</h3>
               <p>
                 We could not find the page you were looking for.
-                Meanwhile, you may <a href="{{ route('index')}}">return to home</a>
+                Meanwhile, you may <a href="{{ route('search')}}">return to home</a>
               </p>
             </div><!-- /.error-content -->
           </div><!-- /.error-page -->
