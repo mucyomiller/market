@@ -38,6 +38,7 @@ class AdminController extends Controller
         $message =Message::all();
         return view('admin.message')->with('messages', $message);
     }
+
     public function readMessage(Request $request)
     {
         $id =$request->input('id');
@@ -61,6 +62,9 @@ class AdminController extends Controller
         }
         $user->save();
         return redirect()->route('admin.listuser');
+    }
+    public function imageupload(Request $request){
+
     }
     public function delete(Request $request)
     {
