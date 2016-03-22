@@ -84,7 +84,7 @@
                   <a href="delete?scope=message&id={{$message->id}}">
                   <button class="btn btn-default"><i class="fa fa-trash-o"></i> Delete</button>
                   </a>
-                  <button class="btn btn-default"><i class="fa fa-print"></i> Print</button>
+                  <button class="btn btn-default" onclick="window.print();"><i class="fa fa-print"></i> Print</button>
                 </div><!-- /.box-footer -->
               </div><!-- /. box -->
             </div><!-- /.col -->
