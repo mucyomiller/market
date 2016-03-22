@@ -73,6 +73,11 @@ class AdminController extends Controller
             $category->where('id', $request->id)->delete();
             return redirect()->route('admin.listcategory');
         }
+        elseif ($request->scope === "message") {
+            $message= new Message;
+            $message->where('id', $request->id)->delete();
+            return redirect()->route('admin.message');
+        }
     }
     public function listcategory()
     {
