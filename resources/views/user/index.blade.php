@@ -30,7 +30,7 @@
 </div>
 {!!Form::close() !!}
 </div>
-<div class="col-lg-3	">
+<div class="col-lg-3">
 </div>
 <div class="col-lg-6">
 <h3> Sign Me Up</h3> 

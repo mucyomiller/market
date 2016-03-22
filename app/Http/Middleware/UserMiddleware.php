@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Middleware;
-
+use Auth;
 use Closure;
 
 class UserMiddleware
@@ -16,7 +16,7 @@ class UserMiddleware
     public function handle($request, Closure $next)
     {
         if (!Auth::user()->check()) {
-            return redirect()->route('login');
+            return redirect()->route('index')->with('info','You Must login first');
         }
         return $next($request);
     }

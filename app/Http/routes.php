@@ -55,7 +55,6 @@ Route::get('getMarket', function () {
 Route::get('index',
   ['uses'=>'UserController@index',
   'as'=>'index',
-  'middleware'=>['guest'],
   ]);
 
 Route::post('signup',
