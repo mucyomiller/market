@@ -10,13 +10,13 @@
                       <tr>
                         <td>Last Name:</td>
                         <td>
-                         {{ucfirst(Auth::user()->user()->personInfo->last_name)}}
+                         {{ucfirst(Auth::user()->user()->personInfo->lastname)}}
                         <td>
                       </tr>
                       <tr>
                         <td>First Name:</td>
                         <td>
-                          {{ucfirst(Auth::user()->user()->personInfo->first_name)}}
+                          {{ucfirst(Auth::user()->user()->personInfo->firstname)}}
                         </td>
                       </tr>
                       <tr>
