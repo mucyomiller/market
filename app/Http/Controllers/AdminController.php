@@ -64,6 +64,7 @@ class AdminController extends Controller
         return redirect()->route('admin.listuser');
     }
     public function imageupload(Request $request){
+        dd($request);
 
     }
     public function delete(Request $request)

@@ -19,6 +19,26 @@ Route::get('enter', ['uses'=>'AdminController@index']);
 
 /*
 |--------------------------------------------------------------------------
+| Image Routes
+|--------------------------------------------------------------------------
+|         here is where all image's route located 
+|
+*/
+
+Route::get('image/{src}/{w?}/{h?}',function($src,$w=100,$h=100){
+  //intervention image caching
+  //closure and scoping anonymous function
+  $cacheimage = Image::cache(function($image) use ($src,$w,$h){
+    return $image->make("admin/dist/img/".$src)->resize($w,$h);
+  }, 2, true);
+  
+  //dd($cachedimage);
+  return Response::make($cacheimage,200,array('Content-Type'=>'image/png'));
+});
+
+
+/*
+|--------------------------------------------------------------------------
 | User Routes
 |--------------------------------------------------------------------------
 |         here is where all user's route located 
@@ -140,6 +160,7 @@ Route::group(['prefix'=>'admin','as' => 'admin.'], function () {
     Route::get('prices', ['uses'=>'AdminController@getprices', 'as'=>'prices']);
     Route::post('addcategory', ['uses'=>'AdminController@addcategory', 'as'=>'addcategory']);
     Route::post('login', ['uses'=>'AdminController@postSignin', 'as'=>'login']);
+    Route::post('upload',['uses'=>'AdminController@imageupload','as'=>'upload']);
     Route::get('test',function(){
       return view('admin.ok');
     });
