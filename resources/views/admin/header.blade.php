@@ -18,13 +18,13 @@
         <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <img src="dist/img/fred.jpg" class="user-image" alt="User Image">
+                  <img src="{{asset('admin/dist/img/fred.jpg')}}" class="user-image" alt="User Image">
                   <span class="hidden-xs">{{ Auth::admin()->get()->firstname}} {{ Auth::admin()->get()->lastname}}</span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
                   <li class="user-header">
-                    <img src="dist/img/fred.jpg" class="img-circle" alt="User Image">
+                    <img src="{{asset('admin/dist/img/fred.jpg')}}" class="img-circle" alt="User Image">
                     <p>
                       {{ Auth::admin()->get()->firstname}} {{Auth::admin()->get()->lastname}} - admin
                       <small>From {{ Auth::admin()->get()->created_at->diffForHumans() }}</small>
