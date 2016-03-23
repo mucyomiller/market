@@ -90,11 +90,21 @@ class AdminController extends Controller
             $message->where('id', $request->id)->delete();
             return redirect()->route('admin.message');
         }
+        elseif ($request->scope == "product") {
+            $product =new Product;
+            $product->where('id',$request->prod_id)->delete();
+            return redirect()->route('admin.listcategory');
+        }
     }
     public function listcategory()
     {
         $categories = Category::orderBy('category_name', 'asc')->get();
         return view('admin.addcategory')->with('categories', $categories);
+    }
+    public function listproducts(Request $request){
+        $category =Category::findOrFail($request->id);
+        $products = $category->products->all();
+        return view('admin.listproducts')->with(['products'=>$products,'category'=>$category]);
     }
     public function addcategory(Request $request)
     {
