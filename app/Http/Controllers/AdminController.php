@@ -64,7 +64,14 @@ class AdminController extends Controller
         return redirect()->route('admin.listuser');
     }
     public function imageupload(Request $request){
-        dd($request);
+        //dd($request);
+        //get filename from post request
+        $file = $request->file('file');
+        //set filename
+        $filename = uniqid() . $file->getClientOriginalName();
+        //move file to cerrect location
+        $file->move('img', $filename);
+        //save image details into datavase
 
     }
     public function delete(Request $request)
