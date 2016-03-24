@@ -93,7 +93,7 @@ class AdminController extends Controller
         elseif ($request->scope == "product") {
             $product =new Product;
             $product->where('id',$request->prod_id)->delete();
-            return redirect()->route('admin.listcategory');
+            return redirect()->route('admin.listproducts',['cat_id'=>$request->cat_id])->with('info','product deleted successful');
         }
     }
     public function listcategory()
@@ -102,7 +102,7 @@ class AdminController extends Controller
         return view('admin.addcategory')->with('categories', $categories);
     }
     public function listproducts(Request $request){
-        $category =Category::findOrFail($request->id);
+        $category =Category::findOrFail($request->cat_id);
         $products = $category->products->all();
         return view('admin.listproducts')->with(['products'=>$products,'category'=>$category]);
     }
