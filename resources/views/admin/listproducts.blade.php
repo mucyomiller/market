@@ -20,7 +20,7 @@
 <div class="box-header with-border">
 <h3 class="box-title">Add Product Form</h3>
 </div><!-- /.box-header -->
-<form action="{{route('admin.addcategory')}}" method="POST" class="form-horizontal">
+<form action="{{route('admin.addproduct',['cat_id'=>$category->id])}}" method="POST" class="form-horizontal">
 <script type="text/javascript">
   window.setTimeout(function() {
     $(".alert-message").fadeTo(500, 0).slideUp(500, function(){
@@ -32,21 +32,21 @@
 <div class="alert alert-success alert-message">{{ Session::get('info') }}</div>
 @endif
 <div class="box-body">
-<div class="form-group {{ $errors->has('category')? ' has-error':''}} ">
-<label for="inputcat" class="col-sm-2 control-label text-green">Category </label>
+<div class="form-group {{ $errors->has('product_name')? ' has-error':''}} ">
+<label for="inputcat" class="col-sm-2 control-label text-green">Product </label>
 <div class="col-sm-10">
-<input type="text"  name="category" class="form-control" id="inputcat" value="{{ old('category')}}" placeholder="Enter new product name">
-@if($errors->has('category'))
-<span class="help-block">{{ $errors->first('category') }}</span>
+<input type="text"  name="product_name" class="form-control" id="inputcat" value="{{ old('product_name')}}" placeholder="Enter new product name">
+@if($errors->has('product_name'))
+<span class="help-block">{{ $errors->first('product_name') }}</span>
 @endif
 </div>
 </div>
-<div class="form-group {{ $errors->has('description')? ' has-error':''}} ">
-<label for="description" class="col-sm-2 control-label text-green">quantity unit</label>
+<div class="form-group {{ $errors->has('quantity_unit')? ' has-error':''}} ">
+<label for="quantity_unit" class="col-sm-2 control-label text-green">Q. unit</label>
 <div class="col-sm-10">
-<input type="text" class="form-control" name="quantity" value="{{ old('quantity')}}" placeholder="Enter Quantity unit">
-@if($errors->has('description'))
-<span class="help-block">{{ $errors->first('description') }}</span>
+<input type="text" class="form-control" name="quantity_unit" value="{{ old('quantity_unit')}}" placeholder="Enter Quantity unit">
+@if($errors->has('quantity_unit'))
+<span class="help-block">{{ $errors->first('quantity_unit') }}</span>
 @endif
 </div>
 </div>

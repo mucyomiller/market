@@ -116,6 +116,16 @@ class AdminController extends Controller
         \Session::flash('info', 'Category Add Successfull');
         return redirect()->route('admin.listcategory');
     }
+    public function addproduct(Request $request)
+    {
+        $this->validate($request, [
+            'product_name'=>'required|min:3|max:255',
+            'quantity_unit'=>'min:3'
+            ]);
+        Product::create(['product_name'=>$request->input('product_name'), 'quantity_unit'=>$request->input('quantity_unit'), 'category_id'=>$request->input('cat_id')]);
+        \Session::flash('info', 'New Product Added Successful');
+        return redirect()->route('admin.listproducts',['cat_id'=>$request->cat_id]);
+    }
     public function getprices(Request $request)
     {
         if ($request->id) {
