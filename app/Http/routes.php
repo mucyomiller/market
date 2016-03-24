@@ -82,12 +82,15 @@ Route::post('signup',
   'as'=>'signup',
    'middleware'=>['guest'],
   ]);
+Route::get('signup',['as'=>'signup','uses'=>'UserController@index']);
 Route::post('signin',
   ['uses'=>'UserController@signIn',
   'as'=>'signin',
    'middleware'=>['guest'],
   ]);
-
+Route::get('signin',['as'=>'signin','uses'=>function(){
+  return view('user.login');
+}]);
 Route::get('signout',
   ['uses'=>'UserController@signOut',
   'as'=>'signout',

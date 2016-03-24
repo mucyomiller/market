@@ -35,7 +35,7 @@ class UserController extends Controller
       $c =new UserController;
       $categories =$c->categories();
     	$provinces = Province::all(['id', 'province_name']);
-         return view('user.index',compact('provinces',$provinces))->with('categories',$categories);
+         return view('user.signup',compact('provinces',$provinces))->with('categories',$categories);
          
     }
 
