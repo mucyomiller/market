@@ -150,6 +150,7 @@
 
 </div>
 </div>
+@push('scripts')
 <script type="text/javascript">
   $('#form-province').on('change',function(e){
     console.log(e);
@@ -224,6 +225,6 @@
   });
 
 </script>
-
+@endpush
 
 @stop

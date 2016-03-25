@@ -36,5 +36,6 @@
 		@yield('content')
 	</div>
 	@include('templates.partials.footer');
+    @stack('scripts')
 </body>
 </html>
