@@ -39,9 +39,6 @@
         <a href="{{route('search')}}">home</a>
     </li>
     <li>
-        <a href="#services">Search Product</a>
-    </li>
-    <li>
         <a href="{{ route('signin') }}">Sign in</a>
     </li>
     <li>
