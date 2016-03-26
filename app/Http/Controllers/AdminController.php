@@ -9,6 +9,7 @@ use App\Category;
 use App\Product;
 use App\Price;
 use App\Message;
+use Carbon\Carbon;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -49,7 +50,9 @@ class AdminController extends Controller
     }
     public function listuser()
     {
-        $users = User::paginate(15);
+        $users = User::where('updated_at','<=',Carbon::now())
+        ->orderby('updated_at','desc')
+        ->paginate(15);
         return view('admin.users')->with('users', $users);
     }
     public function approveuser(Request $request)
