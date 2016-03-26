@@ -88,8 +88,8 @@ class UserController extends Controller
     public function signIn(Request $request){
      
      $this->validate($request,[
-        'sign-in-phone'=>'required',
-        'sign-in-pin'=>'required',
+        'sign-in-phone'=>'required|min:10|max:10',
+        'sign-in-pin'=>'required|min:4',
       ]);
        $phone=$request->input('sign-in-phone');
        $pin=$request->input('sign-in-pin');
