@@ -1,3 +1,4 @@
+<div class="navbar">
 <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
 <div class="container topnav">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -51,3 +52,4 @@
 </div>
 <!-- /.container -->
 </nav>
+</div>

@@ -31,11 +31,11 @@
 </head>
 <body>
 @include('templates.partials.header')
-	<div class="container">
-		@include('templates.partials.alert')
-		@yield('content')
-	</div>
-	@include('templates.partials.footer');
-    @stack('scripts')
+<div class="container">
+@include('templates.partials.alert')
+@yield('content')
+</div>
+@include('templates.partials.footer')
+@stack('scripts')
 </body>
 </html>
