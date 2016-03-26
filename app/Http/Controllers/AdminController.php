@@ -36,7 +36,7 @@ class AdminController extends Controller
     }
     public function getMessage()
     {
-        $message =Message::all();
+        $message =Message::orderby('created_at','desc')->get();
         return view('admin.message')->with('messages', $message);
     }
 
