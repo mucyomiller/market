@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Request;
 use Redis;
 
-class socketController extends Controller
+class SocketController extends Controller
 {
     public function __construct()
     {
