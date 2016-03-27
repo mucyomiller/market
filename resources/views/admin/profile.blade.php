@@ -129,11 +129,23 @@ Admin Profile
           </div>
         </div>
         <div class="tab-pane" id="settings">
-          <form class="form-horizontal" action={{ url('admin/upload') }} method="POST">
+          <form class="form-horizontal" action=# method="POST">
             <div class="form-group">
-              <label for="inputName" class="col-sm-2 control-label">Name</label>
+              <label for="inputName" class="col-sm-2 control-label">FirstName</label>
               <div class="col-sm-10">
-                <input type="email" class="form-control" id="inputName" placeholder="Name">
+                <input type="text" class="form-control" id="inputName" placeholder="First Name">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputName" class="col-sm-2 control-label">LastName</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputName" placeholder="Last Name">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputName" class="col-sm-2 control-label">Job Title</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputName" placeholder="Job Title">
               </div>
             </div>
             <div class="form-group">
@@ -143,21 +155,27 @@ Admin Profile
               </div>
             </div>
             <div class="form-group">
-              <label for="inputName" class="col-sm-2 control-label">Photo</label>
+              <label for="inputEducation" class="col-sm-2 control-label">Education</label>
               <div class="col-sm-10">
-                <textarea class="form-control file" id="inputExperience"></textarea>
+                <textarea class="form-control" id="inputEducation" placeholder="Education"></textarea>
               </div>
             </div>
             <div class="form-group">
-              <label for="inputExperience" class="col-sm-2 control-label">Experience</label>
+              <label for="inputLocation" class="col-sm-2 control-label">Location</label>
               <div class="col-sm-10">
-                <textarea class="form-control" id="inputExperience" placeholder="Experience"></textarea>
+                <input type="text" class="form-control" id="inputLocation" placeholder="Location">
               </div>
             </div>
             <div class="form-group">
               <label for="inputSkills" class="col-sm-2 control-label">Skills</label>
               <div class="col-sm-10">
                 <input type="text" class="form-control" id="inputSkills" placeholder="Skills">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputPassword" class="col-sm-2 control-label">Password</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputPassword" placeholder=" Current Password">
               </div>
             </div>
             <div class="form-group">
