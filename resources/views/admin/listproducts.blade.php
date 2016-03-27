@@ -3,7 +3,7 @@
 <section class="content-header">
     <h1>
     Category name : 
-    <small><strong>{{ $category->category_name }}</strong></small>
+    <small><strong><a href="{{route('admin.listcategory')}}">{{ $category->category_name }}</a></strong></small>
     </h1>
     <ol class="breadcrumb">
     <li><a href="#"><i class="fa fa-dashboard"></i> products</a></li>

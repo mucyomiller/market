@@ -82,7 +82,7 @@
                         <img src="dist/img/default-50x50.gif" alt="Product Image">
                       </div>
                       <div class="product-info">
-                        <a href="javascript::;" class="product-title">{{ $category->category_name }}</a><span class="pull-right"><a class="btn btn-danger btn-xs" href="delete?scope=category&id={{ $category->id }}">
+                        <a href="listproducts?cat_id={{ $category->id }}" class="product-title">{{ $category->category_name }}</a><span class="pull-right"><a class="btn btn-danger btn-xs" href="delete?scope=category&id={{ $category->id }}">
   <i class="fa fa-trash-o"></i> Delete</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="listproducts?cat_id={{ $category->id }}"><span class="label label-info">{{ $category->products->count() }}</span></a></span>
                         <span class="product-description">
                           {{ $category->description }}
