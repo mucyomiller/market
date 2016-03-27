@@ -17,11 +17,12 @@
             <li class="header">MAIN NAVIGATION</li>
             <li class="active treeview">
               <a href="#">
-                <i class="fa fa-dashboard"></i> <span>User's Options</span> <i class="fa fa-angle-left pull-right"></i>
+                <i class="fa fa-dashboard"></i> <span>Managements Options</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li class="active"><a href="{{ route('admin.listuser') }}"><i class="fa fa-circle-o text-aqua"></i> List User</a></li>
-                <li><a href="{{ route('admin.listcategory')}}"><i class="fa fa-circle-o text-green"></i> Add Category</a></li>
+                <li class="active"><a href="{{ route('admin.listuser') }}"><i class="fa fa-circle-o text-aqua"></i> Manage Users</a></li>
+                <li><a href="{{ route('admin.listcategory')}}"><i class="fa fa-circle-o text-green"></i> Manage Categories</a></li>
+                <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> Manage Markets</a></li>
               </ul>
             </li>
             <li class="treeview">
