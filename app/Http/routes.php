@@ -16,7 +16,6 @@ use App\Market;
 |
 */
 Route::get('enter', ['uses'=>'AdminController@index']);
-
 /*
 |--------------------------------------------------------------------------
 | Image Routes
