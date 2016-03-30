@@ -88,56 +88,7 @@ this.value= parseFloat(this.value.replace(/,/g, ""))
 </div><!--/row-->
 
 <hr>
-
-<div class="row">
-<div class="col-sm-4 col-xs-6">
-<div class="panel panel-default">
-<div class="panel-thumbnail"><img src="#" class="img-responsive"></div>
-<div class="panel-body">
-<p class="lead">Hacker News</p>
-<p>120k Followers, 900 Posts</p>
-
-<p>
-<img src="#" width="28px" height="28px">
-<img src="#" width="28px" height="28px">
-</p>
-</div>
-</div>
-</div><!--/col-->
-
-<div class="col-sm-4 col-xs-6">
-<div class="panel panel-default">
-<div class="panel-thumbnail"><img src="#" class="img-responsive"></div>
-<div class="panel-body">
-<p class="lead">Bootstrap Templates</p>
-<p>902 Followers, 88 Posts</p>
-
-<p>
-<img src="#" width="28px" height="28px">
-<img src="#" width="28px" height="28px">
-</p>
-</div>
-</div>
-</div><!--/col-->
-
-<div class="col-sm-4 col-xs-6">
-<div class="panel panel-default">
-<div class="panel-thumbnail"><img src="#" class="img-responsive"></div>
-<div class="panel-body">
-<p class="lead">Social Media</p>
-<p>19k Followers, 789 Posts</p>
-
-<p>
-<img src="#" width="28px" height="28px">
-<img src="#" width="28px" height="28px">
-</p>
-</div>
-</div>
-</div><!--/col-->
-
-</div>
-
-
+@include('user.endcontents')
 <div class="clearfix"></div>
 
 <hr>
