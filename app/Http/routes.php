@@ -15,7 +15,7 @@ use App\Market;
 | and give it the controller to call when that URI is requested.
 |
 */
-Route::get('enter', ['uses'=>'AdminController@index']);
+
 /*
 |--------------------------------------------------------------------------
 | Image Routes
@@ -71,54 +71,17 @@ Route::get('getMarket', function () {
 
 });
 
-Route::get('index',
-  ['uses'=>'UserController@index',
-  'as'=>'index',
-  ]);
-
-Route::post('signup',
-  ['uses'=>'UserController@signUp',
-  'as'=>'signup',
-   'middleware'=>['guest'],
-  ]);
+Route::get('index',['uses'=>'UserController@index','as'=>'index']);
+Route::post('signup',['uses'=>'UserController@signUp','as'=>'signup','middleware'=>['guest']]);
 Route::get('signup',['as'=>'signup','uses'=>'UserController@index']);
-Route::post('signin',
-  ['uses'=>'UserController@signIn',
-  'as'=>'signin',
-   'middleware'=>['guest'],
-  ]);
-Route::get('signin',['as'=>'signin','uses'=>function(){
-  return view('user.login');
-}]);
-Route::get('signout',
-  ['uses'=>'UserController@signOut',
-  'as'=>'signout',
-
-  ]);
-
-Route::post('save',
-  ['uses'=>'UserController@savePrice',
-  'as'=>'save',
-  ]);
-Route::get('price',
-  ['uses'=>'UserController@priceRegistration',
-  'as'=>'price',
-  
-  ]);
-Route::get('authe',
-  ['uses'=>'UserController@authenticated',
-  'as'=>'authe',
-]);
-
-Route::get('profile',
-  ['uses'=>'UserController@profile',
-  'as'=>'profile',
-  ]);
-Route::get('contact',
-  ['uses'=>'UserController@contact',
-  'as'=>'contact',
-  ]);
-
+Route::post('signin',['uses'=>'UserController@signIn','as'=>'signin','middleware'=>['guest']]);
+Route::get('signin',['as'=>'signin','uses'=>function(){return view('user.login');}]);
+Route::get('signout',['uses'=>'UserController@signOut','as'=>'signout']);
+Route::post('save',['uses'=>'UserController@savePrice','as'=>'save']);
+Route::get('price',['uses'=>'UserController@priceRegistration','as'=>'price']);
+Route::get('authe',['uses'=>'UserController@authenticated','as'=>'authe']);
+Route::get('profile',['uses'=>'UserController@profile','as'=>'profile']);
+Route::get('contact',['uses'=>'UserController@contact','as'=>'contact']);
 
 
 /*
@@ -165,10 +128,7 @@ Route::group(['prefix'=>'admin','as' => 'admin.'], function () {
     Route::post('addproduct', ['uses'=>'AdminController@addproduct', 'as'=>'addproduct']);
     Route::post('login', ['uses'=>'AdminController@postSignin', 'as'=>'login']);
     Route::post('upload',['uses'=>'AdminController@imageupload','as'=>'upload']);
-    Route::get('test',function(){
-      return view('admin.ok');
     });
-});
 
 
 
