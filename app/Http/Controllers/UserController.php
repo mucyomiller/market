@@ -27,7 +27,7 @@ class UserController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('user', ['except' => ['signUp', 'signIn', 'signOut','index']]);
+        $this->middleware('user', ['except' => ['signUp', 'signIn', 'getSignIn', 'signOut','index']]);
     }
 
     public function index()
@@ -102,6 +102,9 @@ class UserController extends Controller
       return redirect ()->back()->with('info','can not sign you in');  
       
      
+    }
+    public function getSignIn(){
+      return view('user.login');
     }
     public function priceRegistration(){
        $prod=Auth::user()->user()->category_id;

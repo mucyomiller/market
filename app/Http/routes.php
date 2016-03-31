@@ -75,7 +75,7 @@ Route::get('index',['uses'=>'UserController@index','as'=>'index']);
 Route::post('signup',['uses'=>'UserController@signUp','as'=>'signup','middleware'=>['guest']]);
 Route::get('signup',['as'=>'signup','uses'=>'UserController@index']);
 Route::post('signin',['uses'=>'UserController@signIn','as'=>'signin','middleware'=>['guest']]);
-Route::get('signin',['as'=>'signin','uses'=>function(){return view('user.login');}]);
+Route::get('signin',['as'=>'signin','uses'=>'UserController@getSignIn']);
 Route::get('signout',['uses'=>'UserController@signOut','as'=>'signout']);
 Route::post('save',['uses'=>'UserController@savePrice','as'=>'save']);
 Route::get('price',['uses'=>'UserController@priceRegistration','as'=>'price']);
