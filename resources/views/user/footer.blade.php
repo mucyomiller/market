@@ -1,4 +1,6 @@
-
+<hr>
+<div class="col-md-12 text-center"><p>&copy; Copyright {{date("Y")}}&nbsp; tskillsc,&nbsp;Allright reserved.</p></div>
+</div>
 <!--login modal-->
 <div style="display: none;" id="loginModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog">

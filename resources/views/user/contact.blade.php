@@ -75,9 +75,4 @@ If you find a product/category that is not listed feel free to tell us so that w
 <hr>
 @include('user.endcontents')
 <div class="clearfix"></div>
-
-<hr>
-<div class="col-md-12 text-center"><p><a href="#" target="_ext"></a><br><a href="" target="_ext">&copy; Copyright <?php echo date("Y"); ?> &nbsp;tskillsc,&nbsp;Allright reserved.</a></p></div>
-<hr>
-</div>
 @stop
