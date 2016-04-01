@@ -9,6 +9,7 @@ use App\Category;
 use App\Product;
 use App\Price;
 use App\Message;
+use App\Market;
 use Carbon\Carbon;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -128,6 +129,10 @@ class AdminController extends Controller
         Product::create(['product_name'=>$request->input('product_name'), 'quantity_unit'=>$request->input('quantity_unit'), 'category_id'=>$request->input('cat_id')]);
         \Session::flash('info', 'New Product Added Successful');
         return redirect()->route('admin.listproducts',['cat_id'=>$request->cat_id]);
+    }
+    public function listmarkets(){
+        $markets =Market::all();
+        return view('admin.markets');
     }
     public function getprices(Request $request)
     {

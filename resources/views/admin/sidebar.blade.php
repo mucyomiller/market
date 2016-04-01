@@ -22,7 +22,7 @@
               <ul class="treeview-menu">
                 <li class="active"><a href="{{ route('admin.listuser') }}"><i class="fa fa-circle-o text-aqua"></i> Manage Users</a></li>
                 <li><a href="{{ route('admin.listcategory')}}"><i class="fa fa-circle-o text-green"></i> Manage Categories</a></li>
-                <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> Manage Markets</a></li>
+                <li><a href="{{route('admin.markets')}}"><i class="fa fa-circle-o text-yellow"></i> Manage Markets</a></li>
               </ul>
             </li>
             <li class="treeview">
