@@ -131,8 +131,8 @@ class AdminController extends Controller
         return redirect()->route('admin.listproducts',['cat_id'=>$request->cat_id]);
     }
     public function listmarkets(){
-        $markets =Market::all();
-        return view('admin.markets');
+        $markets =Market::paginate(15);
+        return view('admin.markets')->with('markets',$markets);
     }
     public function getprices(Request $request)
     {
