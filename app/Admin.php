@@ -15,7 +15,7 @@ class Admin extends Model implements AuthenticatableContract,
 {
     use Authenticatable, Authorizable, CanResetPassword;
     protected $table ='admins';
-    protected $fillable = ['username','password','firstname','lastname','email','profile_pic'];
+    protected $fillable = ['username','password','firstname','lastname','email','job_title','profile_pic'];
     /**
      * attributes excluded form model's JSON  form
      * @var array
