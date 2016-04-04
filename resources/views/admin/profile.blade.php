@@ -130,52 +130,76 @@ Admin Profile
         </div>
         <div class="tab-pane" id="settings">
           <form class="form-horizontal" action={{route('admin.profileupdate')}} method="POST">
-            <div class="form-group">
+            <div class="form-group {{ $errors->has('firstname')?' has-error':'' }}">
               <label for="inputName" class="col-sm-2 control-label">FirstName</label>
               <div class="col-sm-10">
                 <input type="text" class="form-control" name="firstname" id="inputName" placeholder="First Name">
+              @if($errors->has('firstname'))
+              <span class="help-block">{{$errors->first('firstname')}}</span>
+              @endif
               </div>
             </div>
-            <div class="form-group">
+            <div class="form-group {{ $errors->has('lastname')?' has-error':'' }}">
               <label for="inputName" class="col-sm-2 control-label">LastName</label>
               <div class="col-sm-10">
                 <input type="text" class="form-control" name="lastname" id="inputName" placeholder="Last Name">
+                @if($errors->has('lastname'))
+              <span class="help-block">{{$errors->first('lastname')}}</span>
+              @endif
               </div>
             </div>
-            <div class="form-group">
+            <div class="form-group {{ $errors->has('jobtitle')?' has-error':'' }}">
               <label for="inputName" class="col-sm-2 control-label">Job Title</label>
               <div class="col-sm-10">
                 <input type="text" class="form-control" name="jobtitle" id="inputName" placeholder="Job Title">
+                @if($errors->has('jobtitle'))
+              <span class="help-block">{{$errors->first('jobtitle')}}</span>
+              @endif
               </div>
             </div>
-            <div class="form-group">
+            <div class="form-group {{ $errors->has('email')?' has-error':'' }}">
               <label for="inputEmail" class="col-sm-2 control-label">Email</label>
               <div class="col-sm-10">
                 <input type="email" class="form-control" name="email" id="inputEmail" placeholder="Email">
+              @if($errors->has('email'))
+              <span class="help-block">{{$errors->first('email')}}</span>
+              @endif
               </div>
             </div>
-            <div class="form-group">
+            <div class="form-group {{ $errors->has('education')?' has-error':'' }}">
               <label for="inputEducation" class="col-sm-2 control-label">Education</label>
               <div class="col-sm-10">
                 <textarea class="form-control" id="inputEducation"  name="education" placeholder="Education"></textarea>
+              @if($errors->has('education'))
+              <span class="help-block">{{$errors->first('education')}}</span>
+              @endif
               </div>
             </div>
-            <div class="form-group">
+            <div class="form-group {{ $errors->has('location')?' has-error':'' }}">
               <label for="inputLocation" class="col-sm-2 control-label">Location</label>
               <div class="col-sm-10">
                 <input type="text" class="form-control" id="inputLocation"  name="location" placeholder="Location">
+                @if($errors->has('location'))
+              <span class="help-block">{{$errors->first('location')}}</span>
+              @endif
               </div>
             </div>
-            <div class="form-group">
+            <div class="form-group {{ $errors->has('skills')?' has-error':'' }}">
               <label for="inputSkills" class="col-sm-2 control-label">Skills</label>
               <div class="col-sm-10">
                 <input type="text" class="form-control" name="skills" id="inputSkills" placeholder="Skills">
+                @if($errors->has('skills'))
+              <span class="help-block">{{$errors->first('skills')}}</span>
+              @endif
               </div>
             </div>
-            <div class="form-group">
+            <div class="form-group  {{ $errors->has('password')?' has-error':'' }}">
               <label for="inputPassword" class="col-sm-2 control-label">Password</label>
               <div class="col-sm-10">
                 <input type="text" class="form-control"  name="password" id="inputPassword" placeholder=" Current Password">
+                @if($errors->has('password'))
+              <span class="help-block">{{$errors->first('password')}}</span>
+              @endif
               </div>
             </div>
             <div class="form-group">

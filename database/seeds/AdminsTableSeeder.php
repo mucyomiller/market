@@ -20,6 +20,9 @@ class AdminsTableSeeder extends Seeder
           'firstname'=>'mucyo',
           'lastname'=>'fred',
           'job_title'=>'Full stack developer',
+          'education'=>'Bsc in Computer And Software Engineering',
+          'location'=>'Kigali,Rwanda',
+          'skills'=>'UI Design,Coding,Java,Python,PHP,JavaScript',
           'email'=>'mucyomiller@gmail.com'
           ]);
     }

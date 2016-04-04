@@ -26,11 +26,11 @@ class DatabaseSeeder extends Seeder
         $this->call(Productstableseeder::class);
         $this->call(Markettableseeder::class);
         $this->call(AdminsTableSeeder::class);
-        $this->call(UsersTableSeeder::class);
         $this->call(PersoninfoTableSeeder::class);
         $this->call(PointsTableSeeder::class);
         $this->call(MessageTableSeeder::class);
         $this->call(PricesTableSeeder::class);
+        $this->call(AdminsTableSeeder::class);
         Model::reguard();
     }
 }

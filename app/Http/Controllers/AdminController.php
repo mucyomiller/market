@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 
 use Auth;
+use Response;
 use Redirect;
 use App\Admin;
 use App\User;
@@ -34,6 +35,29 @@ class AdminController extends Controller
         
         $admin =Admin::findOrFail($id);
         return view('admin.profile',compact('admin',$admin));
+    }
+    public function profileupdate(Request $request){
+        $this->validate($request, [
+            'firstname'=>'required|min:3|max:255',
+            'lastname'=>'required|min:3|max:255',
+            'jobtitle'=>'required',
+            'email'=>'required',
+            'education'=>'required|min:3|max:255',
+            'location'=>'required|min:3|max:255',
+            'skills'=>'required|min:3|max:255',
+            'password'=>'required|min:3'
+            ]);
+        if(Auth::admin()->attempt(['password'=>$request->password])){
+            $Adminupdates =Admin::findOrFail(Auth::admin()->get()->id);
+            $Adminupdates->update(['firstname'=>$request->firstname,'lastname'=>$request->lastname,'email'=>$request->email,'job_title'=>$request->jobtitle]);
+            if($Adminupdates){
+                return redirect()->route('admin.profile',['id'=>Auth::admin()->get()->id]);
+            }
+        }
+        else{
+             \Session::flash('password', "Please Enter Valid Password to Update your profile infos");
+                return redirect()->back();
+        }
     }
     public function getMessage()
     {

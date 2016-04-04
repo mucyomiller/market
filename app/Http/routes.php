@@ -125,7 +125,7 @@ Route::group(['prefix'=>'admin','as' => 'admin.'], function () {
     Route::get('delete', ['uses'=>'AdminController@delete', 'as'=>'delete']);
     Route::get('prices', ['uses'=>'AdminController@getprices', 'as'=>'prices']);
     Route::get('markets',['uses'=>'AdminController@listmarkets','as'=>'markets']);
-    Route::post('profile/{id}/update', ['uses'=>'AdminController@profileupdate', 'as'=>'profileupdate']);
+    Route::post('profileupdate', ['uses'=>'AdminController@profileupdate', 'as'=>'profileupdate']);
     Route::post('addcategory', ['uses'=>'AdminController@addcategory', 'as'=>'addcategory']);
     Route::post('addproduct', ['uses'=>'AdminController@addproduct', 'as'=>'addproduct']);
     Route::post('login', ['uses'=>'AdminController@postSignin', 'as'=>'login']);

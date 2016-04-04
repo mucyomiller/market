@@ -60,7 +60,7 @@ $factory->define(App\Point::class, function (Faker\Generator $faker) {
 });
 $factory->define(App\Message::class, function (Faker\Generator $faker) {
     return [
-        'user_id' => $faker->unique()->numberBetween(1, 10),
+        'user_id' => $faker->numberBetween(1, 10),
         'subject'=>$faker->sentence,
         'message'=>$faker->paragraph(5),
     ];
