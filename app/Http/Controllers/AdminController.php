@@ -42,10 +42,10 @@ class AdminController extends Controller
             'lastname'=>'required|min:3|max:255',
             'jobtitle'=>'required',
             'email'=>'required',
-            'education'=>'required|min:3|max:255',
-            'location'=>'required|min:3|max:255',
-            'skills'=>'required|min:3|max:255',
-            'password'=>'required|min:3'
+            'education'=>'required|min:4|max:255',
+            'location'=>'required|min:4|max:255',
+            'skills'=>'required|min:4|max:255',
+            'password'=>'required|min:4'
             ]);
         if(Auth::admin()->attempt(['password'=>$request->password])){
             $Adminupdates =Admin::findOrFail(Auth::admin()->get()->id);
