@@ -26,7 +26,7 @@
                   <li class="user-header">
                     <img src="{{asset('admin/dist/img/fred.jpg')}}" class="img-circle" alt="User Image">
                     <p>
-                      {{ Auth::admin()->get()->firstname}} {{Auth::admin()->get()->lastname}} - admin
+                      {{ Auth::admin()->get()->firstname}} {{Auth::admin()->get()->lastname}}
                       <small>From {{ Auth::admin()->get()->created_at->diffForHumans() }}</small>
                     </p>
                   </li>
