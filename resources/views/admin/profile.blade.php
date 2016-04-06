@@ -32,13 +32,13 @@ Admin Profile
       <div class="box-body">
         <strong><i class="fa fa-book margin-r-5"></i>  Education</strong>
         <p class="text-muted">
-          B.S. in Computer engineering from the University of Rwanda at cst
+          {{$admin->education}}
         </p>
 
         <hr>
 
         <strong><i class="fa fa-map-marker margin-r-5"></i> Location</strong>
-        <p class="text-muted">Kigali, Rwanda</p>
+        <p class="text-muted">{{$admin->location}}</p>
 
         <hr>
 
