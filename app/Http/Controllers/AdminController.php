@@ -130,9 +130,15 @@ class AdminController extends Controller
         return view('admin.addcategory')->with('categories', $categories);
     }
     public function listproducts(Request $request){
-        $category =Category::findOrFail($request->cat_id);
-        $products = $category->products->all();
-        return view('admin.listproducts')->with(['products'=>$products,'category'=>$category]);
+        if($request->cat_id){
+            $category =Category::findOrFail($request->cat_id);
+            $products = $category->products->all();
+            return view('admin.listproducts')->with(['products'=>$products,'category'=>$category]);
+        }
+        else{
+            $products=Product::paginate(15);
+            return view('admin.allproducts')->with('products',$products);
+        }
     }
     public function addcategory(Request $request)
     {
