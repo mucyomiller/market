@@ -69,11 +69,17 @@ public function results(Request $request){
        ]);
      $prod=$request->input('product');
   $products=Product::where('product_name','=', $prod)->get();
-   if(!empty($products)){
+   if(isset($products)){
   foreach ($products as $product){
   $prices=Price::where('product_id','=',$product->id)->get();
     }
+    if(isset($prices)){
 return view('reports.product')->with('products',$products)->with('prices',$prices);
+}
+else
+{
+return view('reports.product')->with('products',$products)->with('info','NO price yet!');  
+}
    }
    else
   return view('reports.product')->with('info','Product not in!!');  
@@ -81,3 +87,4 @@ return view('reports.product')->with('products',$products)->with('prices',$price
 }
 
 }
+ 

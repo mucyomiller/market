@@ -7,7 +7,7 @@
                  @foreach ($products as $product)
                     <center><h3 class="box-title">{{$product->product_name}}'s Prices</h3></center>
                   @endforeach
-                     @if(!empty($prices))
+                     @if(isset($prices))
                 </div>
                 <div class="box-body">
                 <div class="table-responsive">
